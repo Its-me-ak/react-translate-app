@@ -1,11 +1,11 @@
-*{
+* {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
   font-family: sans-serif;
 }
 
-body{
+body {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -13,46 +13,49 @@ body{
   background: #db07ff;
 }
 
-.container{
+.container {
   width: 800px;
   background-color: #fff;
   padding: 25px;
   border-radius: 8px;
-  box-shadow: 0 10px 15px rgba(0,0,0,0.2);
+  box-shadow: 0 10px 15px rgba(0, 0, 0, 0.2);
 }
 
-.wrapper{
+.wrapper {
   border-radius: 5px;
   border: 1px solid #ccc;
 }
 
-.wrapper .text-input{
+.wrapper .text-input {
   display: flex;
   border-bottom: 1px solid #ccc;
 }
 
-.text-input .to-text{
+.text-input .to-text {
   border-radius: 0px;
   border-left: 1px solid #ccc;
 }
 
-.text-input textarea{
+.text-input textarea {
   height: 270px;
   width: 100%;
   outline: none;
   border: none;
   resize: none;
   background: none;
-  font-size: 15px;
+  font-size: 16px;
   padding: 10px 15px;
   border-radius: 5px;
 }
 
-.text-input textarea::placeholder{
+.text-input textarea::placeholder {
   color: #b7b6b6;
 }
 
-.controls, li, .icons, .icons i{
+.controls,
+li,
+.icons,
+.icons i {
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -63,11 +66,11 @@ body{
   padding: 12px 15px;
 }
 
-.controls .row{
+.controls .row {
   width: 38%;
 }
 
-.controls .row .icons i{
+.controls .row .icons i {
   width: 30px;
   color: #adadad;
   font-size: 15px;
@@ -81,12 +84,12 @@ body{
   border-right: 1px solid #ccc;
 }
 
-.controls .row.to .icons{
+.controls .row.to .icons {
   padding-left: 15px;
   border-left: 1px solid #ccc;
 }
 
-.controls .row select{
+.controls .row select {
   color: #333;
   border: none;
   outline: none;
@@ -95,7 +98,7 @@ body{
   padding-left: 5px;
 }
 
-.text-input textarea::-webkit-scrollbar{
+.text-input textarea::-webkit-scrollbar {
   width: 4px;
 }
 
@@ -104,11 +107,11 @@ body{
 }
 
 .text-input textarea::-webkit-scrollbar-track,
-.controls .row select::-webkit-scrollbar-track{
+.controls .row select::-webkit-scrollbar-track {
   background: #fff;
 }
 
-.text-input textarea::-webkit-scrollbar-thumb{
+.text-input textarea::-webkit-scrollbar-thumb {
   background: #ddd;
   border-radius: 5px;
 }
@@ -119,18 +122,18 @@ body{
   border-right: 2px solid #fff;
 }
 
-.controls .exchange{
+.controls .exchange {
   color: #adadad;
   font-size: 16px;
   cursor: pointer;
   transition: 0.2s ease;
 }
 
-.controls i:active{
+.controls i:active {
   transform: scale(0.9);
 }
 
-.container button{
+.container button {
   width: 100%;
   padding: 14px;
   outline: none;
@@ -142,4 +145,38 @@ body{
   background: #db07ff;
   border-radius: 5px;
   cursor: pointer;
+}
+
+@media screen and (min-width:577px) and (max-width:769px) {
+  .container {
+    max-width: 700px;
+  }
+
+  .wrapper .text-input {
+    flex-direction: column;
+  }
+
+  .text-input .from-text {
+    border-bottom: 1px solid #ccc;
+    border-left: none;
+  }
+}
+
+@media screen and (max-width:576.9px) {
+  .container {
+    width: 98%;
+  }
+
+  .wrapper .text-input {
+    flex-direction: column;
+  }
+
+  .text-input .from-text {
+    border-bottom: 1px solid #ccc;
+    border-left: none;
+  }
+
+    .text-input textarea{
+      font-size: 15px;
+    }
 }

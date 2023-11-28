@@ -52,7 +52,6 @@ const Translate = () => {
         })
     }, [])
     return (
-        <>
             <div className='container'>
                 <div className="wrapper">
                     <div className="text-input">
@@ -82,7 +81,6 @@ const Translate = () => {
 
                 <button>Translate Text</button>
             </div>
-        </>
     )
 }
 
