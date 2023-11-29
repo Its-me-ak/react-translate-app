@@ -51,18 +51,32 @@ const Translate = () => {
             })
         })
     }, [])
+    // Copy Text
+    const copyText = () => {
+        let text = document.querySelector('#fromText');
+        text.select();
+        text.setSelectionRange(0, 999999);
+        navigator.clipboard.writeText(text.value);
+    }
+
+    const copyTranslatedText = () => {
+        let text = document.querySelector('#toText');
+        text.select();
+        text.setSelectionRange(0, 999999);
+        navigator.clipboard.writeText(text.value);
+    }
     return (
             <div className='container'>
                 <div className="wrapper">
                     <div className="text-input">
-                        <textarea spellCheck="true" className='from-text' placeholder='Enter Text'></textarea>
-                        <textarea readOnly className='to-text' placeholder='Translated Text'></textarea>
+                        <textarea spellCheck="true" className='from-text' id='fromText' placeholder='Enter Text'></textarea>
+                        <textarea readOnly className='to-text' id='toText' placeholder='Translated Text'></textarea>
                     </div>
                     <ul className='controls'>
                         <li className='row from'>
                             <div className='icons'>
                                 <i id='from' className="fa-solid fa-volume-high"></i>
-                                <i id='from' className="fa-solid fa-copy"></i>
+                                <i id='from' onClick={copyText} className="fa-solid fa-copy"></i>
                             </div>
                             <select></select>
                         </li>
@@ -73,7 +87,7 @@ const Translate = () => {
                             <select></select>
                             <div className='icons'>
                                 <i id='to' className="fa-solid fa-volume-high"></i>
-                                <i id='to' className="fa-solid fa-copy"></i>
+                                <i id='to' onClick={copyTranslatedText} className="fa-solid fa-copy"></i>
                             </div>
                         </li>
                     </ul>
