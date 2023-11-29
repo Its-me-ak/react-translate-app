@@ -10,7 +10,8 @@ body {
   justify-content: center;
   align-items: center;
   min-height: 100vh;
-  background: #db07ff;
+  width: 100%;
+  background-image: linear-gradient(120deg, #fccb90 0%, #d57eeb 100%);
 }
 
 .container {
@@ -142,7 +143,8 @@ li,
   margin-top: 20px;
   font-size: 17px;
   font-weight: 700;
-  background: #db07ff;
+  background-size: 200% auto;
+  background-image: linear-gradient(to right, #DD5E89 0%, #F7BB97 51%, #DD5E89 100%);
   border-radius: 5px;
   cursor: pointer;
 }
@@ -163,8 +165,15 @@ li,
 }
 
 @media screen and (max-width:576.9px) {
+  body {
+    display: block;
+    height: auto;
+    padding: 1rem;
+  }
+
   .container {
-    width: 98%;
+    width: 100%;
+    padding: 12px;
   }
 
   .wrapper .text-input {
@@ -176,7 +185,26 @@ li,
     border-left: none;
   }
 
-    .text-input textarea{
-      font-size: 15px;
+  .text-input textarea {
+    font-size: 15px;
+    height: 220px;
+    padding: 10px;
+  }
+
+  .controls {
+    display: block;
+  }
+
+  .controls .row{
+    width: 100%;
+  }
+
+  li.exchange{
+    margin: 10px 0px;
+    justify-content: center;
+  }
+
+    .controls .row select{
+      font-size: 17px;
     }
 }
